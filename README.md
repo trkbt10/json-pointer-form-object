@@ -30,7 +30,7 @@ import { formToObject } from "form-to-object";
 const source = `
   <input type="text" name="items/string" value="string" />
   <input type="number" name="items/number" value="123" />
-  <input type="checkbox" name="items/boolean" value="true" />
+  <input type="checkbox" name="items/boolean" checked />
   <input type="date" name="items/date" value="2020-01-01T00:00:00" />
 `;
 const formElement = document.createElement("form");
