@@ -1,0 +1,31 @@
+{
+  "name": "form-to-object",
+  "version": "1.0.0",
+  "description": "",
+  "type": "module",
+  "main": "lib/index.cjs",
+  "types": "types/src/index.d.ts",
+  "exports": {
+    "import": "./lib/index.js",
+    "require": "./lib/index.cjs"
+  },
+  "scripts": {
+    "build": "vite build && tsc",
+    "test": "vitest"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "MIT",
+  "devDependencies": {
+    "@types/jsdom": "^20.0.0",
+    "jsdom": "^20.0.1",
+    "ts-node": "^10.9.1",
+    "tsc": "^2.0.4",
+    "typescript": "^4.8.4",
+    "vite": "^3.1.7",
+    "vitest": "^0.24.1"
+  },
+  "dependencies": {
+    "immutable-json-pointer": "https://github.com/trkbt10/immutable-json-pointer.git#head=main"
+  }
+}
