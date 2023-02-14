@@ -1,4 +1,4 @@
-# form-to-object
+# json-pointer-form-object
 
 This is a library that converts an HTMLFormElement into an Object and returns it.
 
@@ -7,13 +7,13 @@ It is also possible to construct complex objects by specifying a JSONPointer in 
 ## Install
 
 ```bash
-$ npm install git@github.com:trkbt10/form-to-object.git
+$ npm install json-pointer-form-object
 ```
 
 ## Usage
 
 ```typescript
-import { formToObject } from "form-to-object";
+import { formToObject } from "json-pointer-form-object";
 const source = `
     <label for="name">Name: </label>
     <input type="text" name="name" value="Name!!!" />
@@ -26,7 +26,7 @@ console.log(formToObject(formElement)); // { name: "Name!!!", address: "Address!
 ```
 
 ```typescript
-import { formToObject } from "form-to-object";
+import { formToObject } from "json-pointer-form-object";
 const source = `
   <input type="text" name="items/string" value="string" />
   <input type="number" name="items/number" value="123" />
@@ -42,7 +42,7 @@ console.log(formToObject(formElement)); // { "items": { string: "string", number
 
 ```jsx
 import * as React from "react";
-import { formToObject } from "form-to-object";
+import { formToObject } from "json-pointer-form-object";
 
 const Form = () => {
   const handleSubmit = React.useCallback((e) => {
