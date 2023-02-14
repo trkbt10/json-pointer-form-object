@@ -9,7 +9,7 @@
     "sourceMap": true,
     "declaration": true,
     "emitDeclarationOnly": true,
-    "lib": ["ES2020"],
+    "lib": ["ES2020", "DOM"],
     "composite": true,
     "stripInternal": true,
     "skipDefaultLibCheck": true,
