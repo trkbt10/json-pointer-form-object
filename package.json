@@ -4,13 +4,15 @@
   "description": "",
   "type": "module",
   "main": "lib/index.cjs",
-  "types": "types/src/index.d.ts",
+  "types": "types/index.d.ts",
   "exports": {
+    "types": "./types/index.d.ts",
     "import": "./lib/index.js",
-    "require": "./lib/index.cjs"
+    "require": "./lib/index.cjs",
+    "default": "./lib/index.cjs"
   },
   "scripts": {
-    "build": "vite build && tsc",
+    "build": "vite build && tsc -b ./tsconfig.types.json",
     "test": "vitest"
   },
   "keywords": [],
