@@ -42,4 +42,20 @@ describe("formElementToObject", () => {
       age: "0",
     });
   });
+  it("target attribute", () => {
+    const source = `
+      <input value="name" name="name" data-name="__name" />
+      <input value="0" name="age" data-name="__age" />
+    `;
+    const formElement = document.createElement("form");
+    formElement.innerHTML = source;
+    expect(
+      formToObject(formElement, {
+        attribute: "data-name",
+      })
+    ).toStrictEqual({
+      __name: "name",
+      __age: "0",
+    });
+  });
 });

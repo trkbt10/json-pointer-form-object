@@ -17,9 +17,11 @@ type ConflictResolver = (
 export function formToObject<T extends {} = {}>(
   sourceElement: Element,
   options?: {
+    attribute?: string;
     conflictResolver?: ConflictResolver;
   }
 ): T {
+  const attribute = options?.attribute ?? "name";
   const set = createSetter(options?.conflictResolver);
   return getAllInputElements(sourceElement).reduce<{}>((acc, c) => {
     if (isElementDisabled(c)) {
@@ -29,8 +31,12 @@ export function formToObject<T extends {} = {}>(
       const value = formToObject(c, options);
       return { ...acc, ...value };
     }
-    const prefix = c.name.startsWith("/") ? "" : "/";
-    const name = `${prefix}${c.name}`;
+    const pointer = c.getAttribute(attribute);
+    if (!pointer) {
+      return acc;
+    }
+    const prefix = pointer.startsWith("/") ? "" : "/";
+    const name = `${prefix}${pointer}`;
     if (name === "/") {
       return acc;
     }
