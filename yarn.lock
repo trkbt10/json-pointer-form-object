@@ -992,22 +992,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"form-to-object@workspace:.":
-  version: 0.0.0-use.local
-  resolution: "form-to-object@workspace:."
-  dependencies:
-    "@types/jsdom": ^20.0.1
-    "@vitest/coverage-c8": ^0.27.0
-    immutable-json-pointer: ^1.0.6
-    jsdom: ^21.0.0
-    ts-node: ^10.9.1
-    tsc: ^2.0.4
-    typescript: ^4.9.4
-    vite: ^4.0.4
-    vitest: ^0.27.0
-  languageName: unknown
-  linkType: soft
-
 "fs-minipass@npm:^2.0.0, fs-minipass@npm:^2.1.0":
   version: 2.1.0
   resolution: "fs-minipass@npm:2.1.0"
@@ -1354,6 +1338,22 @@ __metadata:
   checksum: 5e553f8a106716a7fc8084350418c69bbbe9121e792760a9b153d5eb184464497c660f2dadcc425f3a17fdde31a3ed4c8bc7b9e9515832f4bbc9d877041bce3a
   languageName: node
   linkType: hard
+
+"json-pointer-form-object@workspace:.":
+  version: 0.0.0-use.local
+  resolution: "json-pointer-form-object@workspace:."
+  dependencies:
+    "@types/jsdom": ^20.0.1
+    "@vitest/coverage-c8": ^0.27.0
+    immutable-json-pointer: ^1.0.6
+    jsdom: ^21.0.0
+    ts-node: ^10.9.1
+    tsc: ^2.0.4
+    typescript: ^4.9.4
+    vite: ^4.0.4
+    vitest: ^0.27.0
+  languageName: unknown
+  linkType: soft
 
 "jsonc-parser@npm:^3.2.0":
   version: 3.2.0
