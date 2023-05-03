@@ -29,4 +29,17 @@ describe("formElementToObject", () => {
       },
     });
   });
+  it("should succeed", () => {
+    const source = `
+      <input value="name" name="name">
+      <input value="0" name="age">
+      <input value="name">
+    `;
+    const formElement = document.createElement("form");
+    formElement.innerHTML = source;
+    expect(formToObject(formElement)).toStrictEqual({
+      name: "name",
+      age: "0",
+    });
+  });
 });

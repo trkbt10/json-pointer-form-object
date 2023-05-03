@@ -29,7 +29,11 @@ export function formToObject<T extends {} = {}>(
       const value = formToObject(c, options);
       return { ...acc, ...value };
     }
-    const name = `${c.name.startsWith("/") ? "" : "/"}${c.name}`;
+    const prefix = c.name.startsWith("/") ? "" : "/";
+    const name = `${prefix}${c.name}`;
+    if (name === "/") {
+      return acc;
+    }
     if (isInputElement(c)) {
       const value = normalizeHTMLInputElementValue(c);
       if (typeof value === "undefined") {
