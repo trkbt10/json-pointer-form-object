@@ -16,18 +16,12 @@ export default defineConfig({
   },
   build: {
     outDir: "lib",
+    minify: "terser",
     lib: {
       entry: path.resolve(__dirname, "src/index.ts"),
-      name: "bundle",
       formats: ["es", "cjs"],
       fileName: (format) => {
-        if (format === "es") {
-          return "index.js";
-        }
-        if (format === "cjs") {
-          return "index.cjs";
-        }
-        return "index.js";
+        return `[name].${format === "es" ? "js" : "cjs"}`;
       },
     },
     rollupOptions: {},
