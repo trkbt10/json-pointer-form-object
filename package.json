@@ -11,32 +11,26 @@
     "require": "./lib/index.cjs",
     "default": "./lib/index.cjs"
   },
-  "files": [
-    "lib",
-    "types"
-  ],
+  "files": ["lib", "types"],
   "scripts": {
     "build": "vite build && tsc -b ./tsconfig.types.json",
     "test": "vitest"
   },
-  "keywords": [
-    "json-pointer",
-    "form",
-    "HTMLFormElement"
-  ],
+  "keywords": ["json-pointer", "form", "HTMLFormElement"],
   "author": "",
   "license": "MIT",
   "devDependencies": {
-    "@types/jsdom": "^20.0.1",
+    "@types/jsdom": "^21.1.7",
     "@vitest/coverage-c8": "^0.27.0",
-    "jsdom": "^21.0.0",
-    "ts-node": "^10.9.1",
+    "jsdom": "^24.1.0",
+    "ts-node": "^10.9.2",
     "tsc": "^2.0.4",
-    "typescript": "^4.9.4",
-    "vite": "^4.0.4",
-    "vitest": "^0.27.0"
+    "typescript": "^5.4.5",
+    "vite": "^5.2.12",
+    "vite-plugin-dts": "^3.9.1",
+    "vitest": "^1.6.0"
   },
   "dependencies": {
-    "immutable-json-pointer": "^1.0.6"
+    "immutable-json-pointer": "^1.1.0"
   }
 }
