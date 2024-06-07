@@ -9,7 +9,7 @@
     "sourceMap": true,
     "declaration": true,
     "emitDeclarationOnly": true,
-    "lib": ["ES2020", "DOM"],
+    "lib": ["ES2022", "DOM"],
     "composite": true,
     "stripInternal": true,
     "skipDefaultLibCheck": true,
@@ -22,7 +22,7 @@
     "noImplicitReturns": true,
     "noFallthroughCasesInSwitch": true,
     "strictNullChecks": true,
-    "types": ["vitest/globals"]
+    "types": ["vitest/globals", "vite/client"]
   },
   "include": ["__tests__/**/*.ts", "src/**/*.ts", "src/**/*.d.ts"]
 }

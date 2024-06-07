@@ -4,16 +4,16 @@
   "description": "",
   "type": "module",
   "main": "lib/index.cjs",
-  "types": "types/index.d.ts",
+  "types": "lib/index.d.ts",
   "exports": {
-    "types": "./types/index.d.ts",
+    "types": "./lib/index.d.ts",
     "import": "./lib/index.js",
     "require": "./lib/index.cjs",
     "default": "./lib/index.cjs"
   },
   "files": ["lib", "types"],
   "scripts": {
-    "build": "vite build && tsc -b ./tsconfig.types.json",
+    "build": "vite build",
     "test": "vitest"
   },
   "keywords": ["json-pointer", "form", "HTMLFormElement"],

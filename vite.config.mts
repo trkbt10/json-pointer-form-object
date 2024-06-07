@@ -1,8 +1,15 @@
 /// <reference types="vitest" />
 import path from "node:path";
 import { defineConfig } from "vitest/config";
+import dts from "vite-plugin-dts";
 export default defineConfig({
-  plugins: [],
+  plugins: [
+    dts({
+      entryRoot: "src",
+      include: "src/**/*.{ts,tsx}",
+      outDir: "lib",
+    }),
+  ],
   resolve: {},
   test: {
     globals: true,
