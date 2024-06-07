@@ -52,7 +52,7 @@ describe("formElementToObject", () => {
     expect(
       formToObject(formElement, {
         attribute: "data-name",
-      })
+      }),
     ).toStrictEqual({
       __name: "name",
       __age: "0",

@@ -1,8 +1,12 @@
 # json-pointer-form-object
 
-This is a library that converts an HTMLFormElement into an Object and returns it.
+This library allows you to convert FormData into a JSON object using JSON Pointer syntax. It simplifies the process of mapping form data to structured JSON, making it easier to handle and manipulate form submissions in web applications.
 
-It is also possible to construct complex objects by specifying a JSONPointer in the NAME attribute of a child element of HTMLFormElement
+Features:
+
+- Easy Conversion: Convert FormData directly into a JSON object.
+- JSON Pointer Syntax: Use JSON Pointer to define the structure and hierarchy of the JSON object.
+- Flexible Mapping: Supports complex nested objects and arrays.
 
 ## Install
 
@@ -10,7 +14,33 @@ It is also possible to construct complex objects by specifying a JSONPointer in 
 $ npm install json-pointer-form-object
 ```
 
-## Usage
+## Usage Example
+
+```typescript
+import { convertFormDataToJson } from "json-pointer-form-object";
+const formData = new FormData();
+formData.append('user/name', 'John Doe');
+formData.append('user/email', 'john.doe@example.com');
+formData.append('preferences/language', 'en');
+
+const jsonObject = convertFormDataToJson(formData);
+console.log(jsonObject);
+// Output:
+// {
+//   "user": {
+//     "name": "John Doe",
+//     "email": "john.doe@example.com"
+//   },
+//   "preferences": {
+//     "language": "en"
+//   }
+// }
+```
+
+This library is particularly useful for developers working with complex form structures and needing to maintain a consistent and organized JSON format.
+
+
+
 
 ```typescript
 import { formToObject } from "json-pointer-form-object";

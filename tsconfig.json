@@ -3,12 +3,11 @@
     "target": "es2021",
     "outDir": "types",
     "allowSyntheticDefaultImports": true,
-    "module": "commonjs",
-    "moduleResolution": "node",
+    "module": "ES2022",
+    "moduleResolution": "Bundler",
     "newLine": "LF",
     "sourceMap": true,
     "declaration": true,
-    "emitDeclarationOnly": true,
     "lib": ["ES2022", "DOM"],
     "composite": true,
     "stripInternal": true,
@@ -24,5 +23,5 @@
     "strictNullChecks": true,
     "types": ["vitest/globals", "vite/client"]
   },
-  "include": ["__tests__/**/*.ts", "src/**/*.ts", "src/**/*.d.ts"]
+  "include": ["__tests__/**/*", "src/**/*"]
 }
