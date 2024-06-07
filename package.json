@@ -20,6 +20,10 @@
   "keywords": ["json-pointer", "form", "HTMLFormElement"],
   "author": "@trkbt10",
   "license": "Unlicense",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/trkbt10/json-pointer-form-object"
+  },
   "devDependencies": {
     "@types/jsdom": "^21.1.7",
     "@vitest/coverage-c8": "^0.27.0",
