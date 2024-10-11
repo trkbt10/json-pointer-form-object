@@ -22,6 +22,16 @@ describe("basic", () => {
     formElement.appendChild(inputElement);
     expect(formToObject(formElement)).toEqual({ "1": 1 });
   });
+  it("HTMLInputElement[type=text][inputMode=numeric]", () => {
+    const formElement = document.createElement("form");
+    const inputElement = document.createElement("input");
+    inputElement.type = "text";
+    inputElement.inputMode = "numeric";
+    inputElement.value = "2";
+    inputElement.name = compile(["2"]);
+    formElement.appendChild(inputElement);
+    expect(formToObject(formElement)).toEqual({ "2": 2 });
+  });
   it("HTMLInputElement[type=radio]", () => {
     const formElement = document.createElement("form");
     const source = {

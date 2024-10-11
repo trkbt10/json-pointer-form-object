@@ -28,7 +28,7 @@ export function normalizeHTMLInputElementValue(c: HTMLInputElement) {
     return valueAsDate(c.value);
   }
   // Numeric
-  if (c.type === "number") {
+  if (c.type === "number" || c.inputMode === "numeric") {
     return valueAsNumber(c.value);
   }
   // Range
